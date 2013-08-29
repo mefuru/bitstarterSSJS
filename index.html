@@ -55,8 +55,11 @@
       padding: 9px 10px 11px;
       text-decoration: none;
       text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-      color:  #FFFFFF;
+      color:  #E6E6FA;
       font-size:1.25em;
+    }
+    .glyphicon-ok {
+      padding: 9px 10px 11px;
     }
     .navbar-brand {
       color: #E0FFFF;
@@ -75,13 +78,20 @@
     }
     .subtitle {
       font-size: 3em;
-      color: #FFFFFF;
+      color: #E6E6FA;
+    }
+    .subtitle:hover {
+      color: #F56E6E;
+    }
+    .aboutSubtitle {
+      font-size: 3em;
+      color: #6495ED;
     }
     .smallprint {
       color: #FFFFFF;
     }
     .statistics h3,.statistics p, #starting, #morePrograms{
-      color:white;
+      color:#E6E6FA;
     }
     .copy {
       padding-top: 2.5%;
@@ -89,13 +99,20 @@
       text-align: justify;
     }
     .pitch {
-        padding: 2.5% 0%;
+      padding: 2.5% 0%;
     }
     .video, .thermometer, .order, .social, .statistics, #bitstarter {
         text-align: center;
     }
     body {
       background: linear-gradient(45deg, #020031 0%, #191970 100%) repeat scroll 0 0 transparent;
+    }
+    .jumboHeader {
+      color: #FF8C00;
+      font-style:italic
+    }
+    .jumboHeaderMain {
+      color: #E6E6FA;
     }
     </style>
   </head>
@@ -118,7 +135,7 @@
         <ul class="nav navbar-nav navbar-left">
           <li><a href="#starting">Programs</a></li>
           <li><a href="#trainers">Trainers</a></li>
-          <li><a href="#howDoesItWork">About</a></li>
+          <li><a href="#about">About</a></li>
           <li><a href="#bitstarter">Bitstarter</a></li>
           <li><a href="/orders">Bitcoin Orders</a></li>
           <!-- Dropdown menu not needed at the moment
@@ -162,13 +179,14 @@
     <div class="jumbotron">
       <div class="container">
         <div class="col-md-12">
-          <h2>Take fitness courses from the world's best trainers, for free</h2>
-          <h3>Join us and get access to</h3>
+          <h2 class="jumboHeaderMain">Take fitness courses from the world's best trainers, for free</h2>
+          <h3 class="jumboHeader">Join us and...</h3>
           <ul>
-            <li> Excellent training courses to help you achieve your fitness goals </li>
-            <li> World class fitness courses </li>
-            <li> An amazing support network of peers and professionals </li>
+            <li>Get access to interesting, fun and rigorous training programs to achieve your fitness goals</li>
+            <li>Make friends via knowledgeable and friendly support networks of peers and professionals</li>
+            <li>Get a real understanding of the core principles so you can apply these to your daily life</li>
           </ul>
+          <h3 class="jumboHeader">We offer courses in a wide range of fitness goals, spanning</h3>
           <span class="label label-success">Fat Loss</span>
           <span class="glyphicon glyphicon-ok"></span>
           <span class="label label-success">Muscle Gain</span>
@@ -189,6 +207,7 @@
       <div class="row pitch top">
         <div class="col-sm-6 col-md-6">
           <div class="thumbnail">
+            <h2 class="aboutSubtitle" id="about">Our story</h2>
             <img class="thumbnailImage introimage" src="http://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Coursera_logo.PNG/200px-Coursera_logo.PNG">
             <img class="thumbnailImage introimage" src="http://startup.stanford.edu/img/stanford-logo.png">
             <div class="caption">
@@ -201,9 +220,72 @@
               <p>Well, you've arrived at my Bitcoin selfstarter!</p>
               <p>Whilst going through the INCREDIBLE material for the course, I asked myself "Wouldn't it be great if we could use the technology used to create MOOCs to transform the health and fitness industry?"<p>
               <p>MOOCs give great educators an opportunity to share their gift of teaching to a huge number of students. Online Fitness gives great coaches and trainers the same opportunity.</p>
-              <p>Our aim is to allow anyone with an internet connection to <em>"Take fitness courses from the world's best trainers, for free"</em>. We want to give users access to a large choice of great training courses, which can be taken in a community environment.</p>
+              <p>Our aim is to allow anyone with an internet connection to <em>"Take fitness courses from the world's best trainers, for free"</em>. We envision a future where everyone has access to world-class fitness courses that has so far been available to a select few. We want to provide users access to a large choice of great training courses, which can be taken in a community environment. We believe that a fitter population will lead to improved quality of lives for the individuals, their families and their communities.</p>
               <p><a class="btn btn-primary btn-large" href="#betaAccess">Sign up for BETA Access</a></p>
               <p><small>Your privacy is our upmost concern. We won't share your details with anyone.</small></p>
+              <div class="container">
+                <h2 class="aboutSubtitle">About</h2>
+                <!-- For the FAQ, we introduce a little bit of JS, using the accordion. -->
+                <div class="panel-group" id="accordion">
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#howDoesItWork">
+                          How does it work?
+                        </a>
+                      </h4>
+                    </div>
+                    <div id="howDoesItWork" class="panel-collapse collapse in">
+                      <div class="panel-body">
+                        <ol>
+                          <li>Find a course that meets your fitness goals</li>
+                          <li>Sign-up for free</li>
+                          <li>Follow the instructions</li>
+                          <li>Make friends, discuss the course and organise meetups on our forums</li>
+                          <li>Become fitter!</li>
+                        </ol>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#whosItFor">
+                          Who's it for?
+                        </a>
+                      </h4>
+                    </div>
+                    <div id="whosItFor" class="panel-collapse collapse">
+                      <div class="panel-body">
+                        <p>We strive to create courses that will match whatever your fitness need. Our initial courses will allow you to:</p>
+                        <ol>
+                          <li>Decrease bodyfat</li>
+                          <li>Build muscle mass</li>
+                          <li>Improve cardio-vascular fitness</li>
+                          <li>Increase flexibility/Yoga</li>
+                          <li>General well being</li>
+                          <li>Connect with like minded people</li>
+                        </ol>
+                        </div>
+                      </div>
+                    </div>
+                  
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#whyDonate">
+                          What will the donations be used for?
+                        </a>
+                      </h4>
+                    </div>
+                    <div id="whyDonate" class="panel-collapse collapse">
+                      <div class="panel-body">
+                        Donations will be used to pay for hosting, create original world class content and to guage interest of the public. If we do not reach our target, all donations will be returned.
+                      </div>
+                    </div>
+                  </div>
+                  </div>
+                </div>
           </div>
         </div>
       </div>
@@ -280,7 +362,7 @@
             <div class="list-group">
               <a href="#" class="list-group-item active">
                 <h5 class="list-group-item-heading">Pledge of $1 (0.01 Bitcoins) or more </h5>
-                <p class="list-group-item-text">SUPPORTER </br> Thank you for your support! You have our deepest gratitude and we'll work even harder to deliver the best platform possible. We invite you to join our forums, where you will be identified as a <em>Bitstarter Supporter</em>. You will be given invitations prior to launch. </br> <small> Estimated delivery: Sep 2013</small></p>
+                <p class="list-group-item-text">SUPPORTER </br> Thank you for your support! You have our deepest gratitude and we'll work even harder to deliver the best platform possible. We invite you to join our forums, where you will be identified as a <em>Bitstarter Supporter</em>. You will be given invitations to ALPHA and BETA versions of the platform. </br> <small> Estimated delivery: Sep 2013</small></p>
               </a>
               <a href="#" class="list-group-item">
                 <h5 class="list-group-item-heading">Pledge of $5 (0.05 Bitcoins) or more </h5>
@@ -452,6 +534,7 @@
           <div class="caption">
             <p>We are in discussions with world class trainers from multiple fields, including strength and conditioning coaches of world boxing champions, world famous Yoga teachers, pro-am national bodybuilding champions, black belt Brazilian Jiu Jitsu intructors and internation competitors and power lifting coaches.</p>
             <p>We don't want to list names of intructors until we can guarantee their involvement, which is dependent on the interest generated by this Bitcoin self-starter!</p>
+            <p><small>Are you a trainer/fitness coach? If you are highly knowledgeable and professional in your field and would like to create a course, get in touch!</small></p>
           </div>
         </div>
       </div>
@@ -473,71 +556,6 @@
     </div>
     </br>
   </div>
-
-    <div class="container">
-    <h2 class="subtitle">About</h2>
-    <!-- For the FAQ, we introduce a little bit of JS, using the accordion. -->
-    <div class="panel-group" id="accordion">
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <h4 class="panel-title">
-            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#howDoesItWork">
-              How does it work?
-            </a>
-          </h4>
-        </div>
-        <div id="howDoesItWork" class="panel-collapse collapse in">
-          <div class="panel-body">
-            <ol>
-              <li>Find a course that meets your fitness goals</li>
-              <li>Sign-up for free</li>
-              <li>Follow the instructions</li>
-              <li>Make friends, discuss the course and organise meetups on our forums</li>
-              <li>Become fitter!</li>
-            </ol>
-          </div>
-        </div>
-      </div>
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <h4 class="panel-title">
-            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#whosItFor">
-              Who's it for?
-            </a>
-          </h4>
-        </div>
-        <div id="whosItFor" class="panel-collapse collapse">
-          <div class="panel-body">
-            <p>We strive to create courses that will match whatever your fitness need. Our initial courses will allow you to:</p>
-            <ol>
-              <li>Decrease bodyfat</li>
-              <li>Build muscle mass</li>
-              <li>Improve cardio-vascular fitness</li>
-              <li>Increase flexibility/Yoga</li>
-              <li>General well being</li>
-              <li>Connect with like minded people</li>
-            </ol>
-            </div>
-          </div>
-        </div>
-      
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <h4 class="panel-title">
-            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#whyDonate">
-              What will the donations be used for?
-            </a>
-          </h4>
-        </div>
-        <div id="whyDonate" class="panel-collapse collapse">
-          <div class="panel-body">
-            Donations will be used to pay for hosting, create original world class content and to guage interest of the public. If we do not reach our target, all donations will be returned.
-          </div>
-        </div>
-      </div>
-      </div>
-    </div>
-
 
     <!-- Not crucial, but we put this under a CC By-SA 3.0 license. -->
     <!-- http://creativecommons.org/licenses/ -->
